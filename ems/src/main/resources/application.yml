@@ -8,9 +8,9 @@ spring:
     name: ems
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ems
+    url: jdbc:mysql://localhost:3306/111
     username: root
-    password: 
+    password: root
 
 # set project name
 server:
@@ -19,7 +19,7 @@ server:
 
 mybatis:
   mapper-locations:
-  - classpath:com/demo/ems/mapper/*.xml
+  - classpath:com/demo/ems/mapper/*.xml   # mapper xml locations
   type-aliases-package: com.demo.ems.entity
     
 
