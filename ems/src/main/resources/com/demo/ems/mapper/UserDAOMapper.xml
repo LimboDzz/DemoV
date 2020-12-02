@@ -1,0 +1,5 @@
+<mapper namespace="com.demo.ems.dao.UserDAO">
+    <insert id="save" parameterType="User">
+        insert into t_user values (#{id},#{username},#{password})
+    </insert>
+</mapper>
