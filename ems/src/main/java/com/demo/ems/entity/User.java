@@ -12,6 +12,9 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @Accessors(chain=true)
 public class User {
+	public User(int id, String username, String password) {
+	}
+	private int id;
     private String username;
     private String password;
 }
