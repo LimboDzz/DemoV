@@ -22,5 +22,5 @@ server:
       init-parameters:
         development: true #开启jsp页面热部署
 mybatis:
-  mapper-locations: classpath:com/baizhi/ems/mapper/*.xml #mapper配置文件的位置
-  type-aliases-package: com.baizhi.ems.entity
+  mapper-locations: classpath:com/demo/ems/mapper/*.xml #mapper配置文件的位置
+  type-aliases-package: com.demo.ems.entity
