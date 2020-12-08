@@ -1,10 +1,13 @@
-<!-- <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-FOR TESTING
-jsp从被请求到响应经历的三个阶段：
-第一阶段：  根据pageEncoding指定的编码方案将jsp编译成Servlet（.java）文件
-第二阶段：  从Servlet文件（.java）到Java字节码文件（.class）
-第三阶段：  从服务器到浏览器由contentType属性中的charset来指定输出。
-            默认的是ISO-8859-1 -->
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!-- 
+    FOR TESTING
+    jsp从被请求到响应经历的三个阶段：
+    第一阶段：  根据pageEncoding指定的编码方案将jsp编译成Servlet（.java）文件
+    第二阶段：  从Servlet文件（.java）到Java字节码文件（.class）
+    第三阶段：  从服务器到浏览器由contentType属性中的charset来指定输出。
+                默认的是ISO-8859-1 
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
     <meta charset="UTF-8">
