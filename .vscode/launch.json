@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ValidateImageCodeUtils",
+            "request": "launch",
+            "mainClass": "com.demo.ems.utils.ValidateImageCodeUtils",
+            "projectName": "ems"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-EmsApplication<ems>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
