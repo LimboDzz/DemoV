@@ -1,6 +1,5 @@
 package com.demo.ems.controller;
 
-import java.net.http.HttpRequest;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +9,7 @@ import com.demo.ems.service.EmpService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,11 +20,11 @@ public class EmpController {
     private EmpService empService;
 
     @GetMapping("findAll")
-    public String findAll(HttpServletRequest req) {
+    public String findAll(Model model) {
         List<Emp> emps = empService.findAll();
         System.out.println(emps);
-        req.setAttribute("emps", emps);
-        // no redirection, no .jsp
-        return "redirect:/ems/emplist.jsp";
+        model.addAttribute("emps", emps);
+        // 注意这里不能用redirect（也可能是model问题）否则前端页面取不到数据 原因待查
+        return "ems/emplist";
     }
 }
