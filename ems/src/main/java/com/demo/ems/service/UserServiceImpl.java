@@ -22,5 +22,10 @@ public class UserServiceImpl implements UserService {
         user.setId(UUID.randomUUID().toString());
         userDAO.save(user);
     }
+
+    @Override
+    public User login(String username, String password) {
+        return userDAO.findByUsernameAndPassword(username,password);
+    }
     
 }

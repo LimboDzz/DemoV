@@ -3,14 +3,16 @@ spring:
   mvc:
     view:
       prefix: /
-      suffix: .jsp
+      suffix: 
+       -.jsp
+       -.html
   application:
     name: ems                                                       # 应用服务名称
   datasource:
     driver-class-name: com.mysql.jdbc.Driver                        # 注册驱动
-    url: jdbc:mysql://localhost:3306/ems?characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8
     username: root
-    password: 
+    password: root
 
 
 

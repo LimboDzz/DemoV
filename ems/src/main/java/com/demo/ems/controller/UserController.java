@@ -8,6 +8,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.alibaba.druid.sql.visitor.functions.Isnull;
 import com.demo.ems.entity.User;
 import com.demo.ems.service.UserService;
 import com.demo.ems.utils.ValidateImageCodeUtils;
@@ -27,6 +29,20 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @PostMapping("login")
+    public String login(String username, String password, HttpServletRequest req) {
+        User user = userService.login(username, password);
+        // System.out.println(user);
+        if (user != null) {
+            HttpSession session = req.getSession();
+            session.setAttribute("user", user);
+            // System.out.println(user);
+            return "redirect:/emp/findAll";
+        } else {
+            return "redirect:/ems/404.jsp";
+        }
+    }
+
     @PostMapping("regist")
     public String regist(User user, String code, HttpServletRequest req) {
         System.out.println(user);
@@ -36,7 +52,12 @@ public class UserController {
             userService.save(user);
             return "redirect:/ems/login.jsp";
         } else {
-            return "redirect:/ems/regist.jsp";
+// would-be errInfo
+// ...
+// ...
+// ...
+// ...
+            return "redirect:/ems/404.jsp";
         }
     }
 
