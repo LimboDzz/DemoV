@@ -32,7 +32,7 @@
 					<h1>
 						add Emp info:
 					</h1>
-					<form action="emplist.html" method="post">
+					<form action="${pageContext.request.contextPath}/emp/save" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>

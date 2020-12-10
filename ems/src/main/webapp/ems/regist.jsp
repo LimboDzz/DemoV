@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>regist</title>
+	<title>注册</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -92,6 +92,8 @@
 					</table>
 					<p>
 						<input type="submit" class="button" value="Submit &raquo;" />
+						<input type="button" class="button" onclick="location.href='${pageContext.request.contextPath}/ems/login.jsp'"
+							value="Login &raquo;" />
 					</p>
 				</form>
 			</div>

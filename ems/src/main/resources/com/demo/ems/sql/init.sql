@@ -10,6 +10,6 @@ create table t_user(
 create table t_emp(
 	id varchar(40) primary key,
 	name varchar(40),
-	salary double(7,2),
+	salary double(20,2),
 	age int(3)
 );

@@ -26,5 +26,4 @@ public class EmpServiceImpl implements EmpService {
     public List<Emp> findAll() {
         return empDAO.findAll();
     }
-
 }
