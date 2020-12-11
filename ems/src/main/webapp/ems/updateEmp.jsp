@@ -5,7 +5,7 @@
 		<title>update Emp</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
-			href="css/style.css" />
+			href="${pageContext.request.contextPath}/ems/css/style.css" />
 	</head>
 
 	<body>
@@ -32,7 +32,7 @@
 					<h1>
 						update Emp info:
 					</h1>
-					<form action="emplist.html" method="post">
+					<form action="${pageContext.request.contextPath}/emp/update" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
@@ -40,7 +40,8 @@
 									id:
 								</td>
 								<td valign="middle" align="left">
-									1
+									${requestScope.emp.id}
+									<input type="hidden" class="inputgri" name="id" value="${requestScope.emp.id}"/>
 								</td>
 							</tr>
 							<tr>
@@ -48,7 +49,7 @@
 									name:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="name" value="zhangshan"/>
+									<input type="text" class="inputgri" name="name" value="${requestScope.emp.name}"/>
 								</td>
 							</tr>
 							<tr>
@@ -56,7 +57,7 @@
 									salary:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="salary" value="20000"/>
+									<input type="text" class="inputgri" name="salary" value="${requestScope.emp.salary}"/>
 								</td>
 							</tr>
 							<tr>
@@ -64,7 +65,7 @@
 									age:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="age" value="20"/>
+									<input type="text" class="inputgri" name="age" value="${requestScope.emp.age}"/>
 								</td>
 							</tr>
 						</table>

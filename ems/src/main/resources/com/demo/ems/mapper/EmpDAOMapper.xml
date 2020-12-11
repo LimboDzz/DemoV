@@ -9,4 +9,20 @@
     <insert id="save">
         insert into t_emp(id,name,salary,age) values(#{id},#{name},#{salary},#{age})
     </insert>
+
+    <delete id="delete">
+        delete from t_emp where id=#{id}
+    </delete>
+
+    <select id="findById" resultType="Emp">
+        select id,name,salary,age from t_emp where id=#{id}
+    </select>
+
+    <update id="update">
+        update t_emp set 
+            name=#{name},
+            salary=#{salary},
+            age=#{age}
+            where id=#{id}
+    </update>
 </mapper>

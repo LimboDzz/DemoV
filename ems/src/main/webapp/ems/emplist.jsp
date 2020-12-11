@@ -64,7 +64,7 @@
 									${emp.age}
 								</td>
 								<td>
-									<a href="emplist.html">delete emp</a>&nbsp;<a href="updateEmp.html">update emp</a>
+									<a href="${pageContext.request.contextPath}/emp/delete?id=${emp.id}">delete emp</a>&nbsp;<a href="${pageContext.request.contextPath}/emp/findById?id=${emp.id}">update emp</a>
 								</td>
 							</tr>
 						</c:forEach>

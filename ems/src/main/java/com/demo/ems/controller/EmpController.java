@@ -32,4 +32,25 @@ public class EmpController {
         // 注意这里不能用redirect（也可能是model问题）否则前端页面取不到数据 原因待查
         return "ems/emplist";
     }
+
+    @GetMapping("delete")
+    public String delete(String id) {
+        System.out.println(id);
+        empService.delete(id);
+        return "redirect:/emp/findAll";
+    }
+
+    @GetMapping("findById")
+    public String findById(String id, Model model) {
+        Emp emp = empService.findById(id);
+        System.out.println(emp);
+        model.addAttribute("emp", emp);
+        return "ems/updateEmp";
+    }
+
+    @PostMapping(value="update")
+    public String update(Emp emp) {
+        empService.update(emp);
+        return "redirect:/emp/findAll";
+    }
 }

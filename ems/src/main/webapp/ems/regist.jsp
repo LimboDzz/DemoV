@@ -5,7 +5,7 @@
 <head>
 	<title>注册</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/ems/css/style.css" />
 </head>
 
 <body>

@@ -26,4 +26,19 @@ public class EmpServiceImpl implements EmpService {
     public List<Emp> findAll() {
         return empDAO.findAll();
     }
+
+    @Override
+    public void delete(String id) {
+        empDAO.delete(id);
+    }
+
+    @Override
+    public Emp findById(String id) {
+        return empDAO.findById(id);
+    }
+
+    @Override
+    public void update(Emp emp) {
+        empDAO.update(emp);
+    }
 }
